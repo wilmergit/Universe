@@ -16,6 +16,11 @@ If you are using VisualStudioCode we recommend some extensions like:
 - Custom CSS and JS Loader
 - HTML CSS SUpport
 
+## Inspiration
+
+  Thanks to the website (https://dribbble.com/tags/web) I was able to develop my website as I found an example that was my style.
+  This is the example: (https://dribbble.com/shots/22691165-Cocode-AI-Landing-Page)
+
 ## Built With
 
   - Html
