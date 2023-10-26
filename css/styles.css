@@ -1,0 +1,1330 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.header {
+
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  position: fixed;
+  width: 100vw;
+  height: 7vh;
+
+}
+
+.header i {
+  /*menu icon*/
+
+  font-size: 22px;
+  margin: 0.8em;
+  color: beige;
+
+}
+
+
+#side-menu {
+  /*Menu*/
+  background: linear-gradient(rgb(55, 54, 56), rgb(0, 0, 0));
+  width: 100vw;
+  height: 20vh;
+  visibility: hidden;
+  position: fixed;
+  border-radius: 0% 0% 27% 27%;
+}
+
+.side-menu-hidden {
+  /*Menu hidden*/
+  transform: translateX(-90vw);
+}
+
+.side-menu-visible {
+  /*Menu visible*/
+  transform: translateX(0);
+}
+
+#side-menu ul {
+  /*Menu Options*/
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: x-large;
+
+}
+
+#side-menu a {
+  /*Links*/
+  color: beige;
+  text-decoration: none;
+
+}
+
+#side-menu a:hover {
+  color: rgb(83, 30, 180);
+}
+
+
+.header h1 {
+  /*universe*/
+  margin: 0.3em;
+  font-size: xx-large;
+  color: beige;
+  height: 5vh;
+
+}
+
+.options {
+  /*div de log in y sign up*/
+  display: flex;
+
+
+}
+
+.header h2 {
+  /*log in y sign up*/
+  margin: 0.7em;
+  padding: 0.7em;
+  font-size: small;
+  text-align: center;
+  color: beige;
+  height: 2vh;
+  width: 5vw;
+  border-radius: 1em;
+  border-style: groove;
+  border-color: rgb(61, 61, 61);
+
+}
+
+.header h2:hover {
+  background-color: rgb(83, 30, 180);
+}
+
+#content {
+  /*Slogan and photo*/
+  display: flex;
+
+  margin-top: 7vh;
+  color: rgb(179, 179, 167);
+  font-size: xx-large;
+
+}
+
+#content h1 {
+  /*Slogan*/
+  margin-left: 0.8em;
+  width: 20vw;
+}
+
+#content img {
+  /*starting image*/
+  margin-left: 16vw;
+}
+
+body h3 {
+  /*Text*/
+  text-align: center;
+  color: beige;
+  font-size: xx-large;
+
+}
+
+/*----------------------------------Funcion 1 y explicacion----------------------------------------*/
+
+.reasons {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+#explanation {
+  /*Question container*/
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25vh;
+
+
+}
+
+#explanation .objective {
+  /*Question*/
+  text-align: center;
+  font-size: xx-large;
+  margin: 0.5em;
+  color: grey;
+
+}
+
+#explanation p {
+  /*Content*/
+  text-align: center;
+  font-size: xx-large;
+  margin-right: 2em;
+  margin-left: 2em;
+  margin-top: 0.5em;
+  color: beige;
+}
+
+#subcategory {
+  display: flex;
+  gap: 3em;
+  color: beige;
+  font-size: xx-large;
+  font-style: italic;
+  margin: 1.5em;
+}
+
+.subgenres:hover {
+  background-color: rgb(83, 30, 180);
+}
+
+#sub-music {
+  background-image: url(../img/category-music.jpg);
+  background-size: cover;
+  width: 36vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+}
+
+.genres {
+
+  color: beige;
+  font-size: x-large;
+  align-items: center;
+  text-align: center;
+  gap: .5em;
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.subgenres {
+  background: rgba(0, 0, 0, 0.336);
+  width: 10vw;
+  height: 4vh;
+
+}
+
+
+#subcategory #function {
+  font-style: normal;
+  text-align: center;
+  display: flex;
+  align-items: center;
+
+}
+
+/*-------------------------Category--------------------------------*/
+
+.image-container {
+
+  width: 98vw;
+  height: 30vh;
+  display: flex;
+  gap: 10px;
+  justify-content: space-evenly;
+  margin: 1em;
+  color: beige;
+  font-size: x-large;
+  font-style: italic;
+}
+
+#games {
+  background-image: url(../img/category-games.jpg);
+  background-size: cover;
+  width: 270px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transition: transform .2s;
+
+}
+
+#games:hover {
+  background-image: url(../img/category-games.jpg);
+  background-size: cover;
+  width: 270px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transform: scale(1.5);
+
+}
+
+#clothes {
+  background-image: url(../img/category-clothes.jpg);
+  background-size: cover;
+  width: 270px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transition: transform .2s;
+}
+
+#clothes:hover {
+  background-image: url(../img/category-clothes.jpg);
+  background-size: cover;
+  width: 270px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transform: scale(1.5);
+}
+
+#movies {
+  background-image: url(../img/category-movies.jpg);
+  background-size: cover;
+  width: 270px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transition: transform .2s;
+}
+
+#movies:hover {
+  background-image: url(../img/category-movies.jpg);
+  background-size: cover;
+  width: 270px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transform: scale(1.5);
+}
+
+#music {
+  background-image: url(../img/category-music.jpg);
+  background-size: cover;
+  width: 270px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transition: transform .2s;
+}
+
+#music:hover {
+  background-image: url(../img/category-music.jpg);
+  background-size: cover;
+  width: 270px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transform: scale(1.5);
+}
+
+#places {
+  background-image: url(../img/category-places.jpeg);
+  background-size: cover;
+  width: 270px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transition: transform .2s;
+}
+
+#places:hover {
+  background-image: url(../img/category-places.jpeg);
+  background-size: cover;
+  width: 270px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transform: scale(1.5);
+}
+
+#books {
+  background-image: url(../img/category-books.jpg);
+  background-size: cover;
+  width: 270px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transition: transform .2s;
+}
+
+#books:hover {
+  background-image: url(../img/category-books.jpg);
+  background-size: cover;
+  width: 270px;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  transform: scale(1.5);
+}
+
+/*---------------------------second function---------------------------------*/
+
+#location {
+  display: flex;
+  flex-direction: column;
+  margin: 1em;
+  align-items: center;
+}
+
+#location img {
+  width: 37vw;
+  height: 30vh;
+  margin: 1.5em;
+
+}
+
+
+#location p {
+  font-size: xx-large;
+  text-align: center;
+  color: beige;
+
+}
+
+.container {
+  /*Final part*/
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  margin: .8em;
+  padding: 0;
+  justify-content: center;
+  gap: 0.5em;
+
+}
+
+.img-container {
+  display: flex;
+  padding: 0;
+  justify-content: center;
+
+
+  gap: 0.5em;
+}
+
+.img-container img {
+  object-fit: fill;
+  width: 360px;
+  height: 360px;
+  transition: transform .2s;
+
+}
+
+.img-container img:hover {
+  object-fit: fill;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  transform: scale(1.5);
+  box-shadow: 0 8px 16px 0 rgb(83, 30, 180), 0 6px 20px 0 rgb(83, 30, 180);
+
+}
+
+#work {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 25vh;
+
+}
+
+#work .info {
+  text-align: center;
+  font-size: xx-large;
+  margin: 0.5em;
+  color: grey;
+
+}
+
+#work p {
+  text-align: center;
+  font-size: xx-large;
+  margin-right: 2em;
+  margin-left: 2em;
+  margin-top: 0.5em;
+  color: beige;
+}
+
+/*-------------------------Body------------------------------------*/
+
+body {
+  background: linear-gradient(rgb(83, 30, 180), rgb(0, 0, 0));
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+/*------------------------Footer-----------------------------------*/
+
+footer {
+  height: 12vh;
+  background-color: rgba(83, 30, 180, 0.527);
+  font-size: larger;
+  color: beige;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 27% 27% 0% 0%;
+
+}
+
+footer p a {
+  text-decoration: none;
+  margin-left: .5em;
+
+}
+
+/*-------------------------Media queries-------------------------------*/
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .content-image {
+    width: 60vw;
+    padding: .5em;
+
+  }
+
+
+
+  .image-container {
+
+    width: 92vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 1em;
+    color: beige;
+    font-size: x-large;
+    font-style: italic;
+  }
+
+  #games {
+    background-image: url(../img/category-games.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+
+  }
+
+  #games:hover {
+    background-image: url(../img/category-games.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+
+  }
+
+  #clothes {
+    background-image: url(../img/category-clothes.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #clothes:hover {
+    background-image: url(../img/category-clothes.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #movies {
+    background-image: url(../img/category-movies.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #movies:hover {
+    background-image: url(../img/category-movies.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #music {
+    background-image: url(../img/category-music.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #music:hover {
+    background-image: url(../img/category-music.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #places {
+    background-image: url(../img/category-places.jpeg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #places:hover {
+    background-image: url(../img/category-places.jpeg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #books {
+    background-image: url(../img/category-books.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #books:hover {
+    background-image: url(../img/category-books.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+
+  #subcategory {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1em;
+    color: beige;
+    font-size: xx-large;
+    font-style: italic;
+    margin: 1.5em;
+  }
+
+  .subgenres {
+    width: 25vw;
+  }
+
+  #sub-music {
+    background-image: url(../img/category-music.jpg);
+    background-size: cover;
+    width: 45vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  #location img {
+    width: 90vw;
+    height: 30vh;
+    margin: 1.5em;
+  }
+
+  .container {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95vw;
+    margin: .8em;
+    padding: 0;
+    justify-content: center;
+    gap: 0.5em;
+
+  }
+
+  .img-container img {
+    object-fit: cover;
+    width: 40vw;
+    height: 30vh;
+  }
+
+  #explanation {
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+
+  }
+
+  #work {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 60vh;
+
+  }
+
+
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    position: static;
+    width: 100vw;
+    height: 7vh;
+  }
+
+  .content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    text-align: center;
+
+  }
+
+  #content h1 {
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .content-image {
+    width: 60vw;
+    padding: .5em;
+
+  }
+
+
+
+  .image-container {
+
+    width: 92vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 1em;
+    color: beige;
+    font-size: x-large;
+    font-style: italic;
+  }
+
+  #games {
+    background-image: url(../img/category-games.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+
+  }
+
+  #games:hover {
+    background-image: url(../img/category-games.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+
+  }
+
+  #clothes {
+    background-image: url(../img/category-clothes.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #clothes:hover {
+    background-image: url(../img/category-clothes.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #movies {
+    background-image: url(../img/category-movies.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #movies:hover {
+    background-image: url(../img/category-movies.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #music {
+    background-image: url(../img/category-music.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #music:hover {
+    background-image: url(../img/category-music.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #places {
+    background-image: url(../img/category-places.jpeg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #places:hover {
+    background-image: url(../img/category-places.jpeg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #books {
+    background-image: url(../img/category-books.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #books:hover {
+    background-image: url(../img/category-books.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+
+  #subcategory {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 1em;
+    color: beige;
+    font-size: xx-large;
+    font-style: italic;
+    margin: 1.5em;
+  }
+
+  .subgenres {
+    width: 25vw;
+  }
+
+  #sub-music {
+    background-image: url(../img/category-music.jpg);
+    background-size: cover;
+    width: 45vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  #location img {
+    width: 90vw;
+    height: 30vh;
+    margin: 1.5em;
+  }
+
+  .container {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95vw;
+    margin: .8em;
+    padding: 0;
+    justify-content: center;
+    gap: 0.5em;
+
+  }
+
+  .img-container img {
+    object-fit: cover;
+    width: 40vw;
+    height: 30vh;
+  }
+
+  #explanation {
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+
+  }
+
+  #work {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 50vh;
+
+  }
+
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    position: static;
+    width: 100vw;
+    height: 7vh;
+  }
+
+  .content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    text-align: center;
+
+  }
+
+  #content h1 {
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .content-image {
+    width: 60vw;
+    padding: .5em;
+
+  }
+
+  .image-container {
+
+    width: 92vw;
+    height: 60vh;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    justify-content: center;
+    margin: 1em;
+    color: beige;
+    font-size: x-large;
+    font-style: italic;
+  }
+
+  #games {
+    background-image: url(../img/category-games.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+
+  }
+
+  #games:hover {
+    background-image: url(../img/category-games.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+
+  }
+
+  #clothes {
+    background-image: url(../img/category-clothes.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #clothes:hover {
+    background-image: url(../img/category-clothes.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #movies {
+    background-image: url(../img/category-movies.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #movies:hover {
+    background-image: url(../img/category-movies.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #music {
+    background-image: url(../img/category-music.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #music:hover {
+    background-image: url(../img/category-music.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #places {
+    background-image: url(../img/category-places.jpeg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #places:hover {
+    background-image: url(../img/category-places.jpeg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #books {
+    background-image: url(../img/category-books.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #books:hover {
+    background-image: url(../img/category-books.jpg);
+    background-size: cover;
+    width: 270px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+
+  #subcategory {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    color: beige;
+    font-size: xx-large;
+    font-style: italic;
+    margin: 1.5em;
+  }
+
+  .subgenres {
+    width: 25vw;
+  }
+
+  #sub-music {
+    background-image: url(../img/category-music.jpg);
+    background-size: cover;
+    width: 45vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  #location img {
+    width: 90vw;
+    height: 40vh;
+    margin: 1.5em;
+  }
+
+  .container {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95vw;
+    margin: .8em;
+    padding: 0;
+    justify-content: center;
+    gap: 0.5em;
+
+  }
+
+  .img-container img {
+    object-fit: cover;
+    width: 40vw;
+    height: 30vh;
+  }
+
+  #explanation {
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+
+  }
+
+  #work {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40vh;
+
+  }
+
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    position: static;
+    width: 100vw;
+    height: 7vh;
+  }
+
+  .content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    text-align: center;
+
+  }
+
+  #content h1 {
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+/* Large devices (laptops/desktops, 1020px and up) */
+@media only screen and (min-width: 1020px) {
+
+  .image-container {
+
+    width: 98vw;
+    height: 30vh;
+    display: flex;
+    gap: 10px;
+    justify-content: space-evenly;
+    margin: 1em;
+    color: beige;
+    font-size: x-large;
+    font-style: italic;
+  }
+
+  #sub-music {
+    background-image: url(../img/category-music.jpg);
+    background-size: cover;
+    width: 36vw;
+    height: 40vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  #subcategory {
+    display: flex;
+    gap: 3em;
+    color: beige;
+    font-size: xx-large;
+    font-style: italic;
+    align-items: center;
+    margin: 1.5em;
+    height: 50vh;
+  }
+
+  .genres {
+
+    color: beige;
+    font-size: x-large;
+    align-items: center;
+    text-align: center;
+    gap: .5em;
+    display: flex;
+    flex-direction: column;
+
+  }
+
+  #location img {
+    width: 37vw;
+    height: 40vh;
+    margin: 1.5em;
+
+  }
+
+  .img-container img {
+    object-fit: fill;
+    width: 360px;
+    height: 400px;
+  }
+
+}
