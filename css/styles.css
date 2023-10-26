@@ -490,6 +490,266 @@ footer p a {
 /*-------------------------Media queries-------------------------------*/
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (max-width: 600px) {
+  .content-image {
+    width: 60vw;
+    padding: .5em;
+
+  }
+
+
+
+  .image-container {
+
+    width: 92vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    margin: 1em;
+    color: beige;
+    font-size: x-large;
+    font-style: italic;
+  }
+
+  #games {
+    background-image: url(../img/category-games.jpg);
+    background-size: cover;
+    width: 290px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+
+  }
+
+  #games:hover {
+    background-image: url(../img/category-games.jpg);
+    background-size: cover;
+    width: 290px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+
+  }
+
+  #clothes {
+    background-image: url(../img/category-clothes.jpg);
+    background-size: cover;
+    width: 290px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #clothes:hover {
+    background-image: url(../img/category-clothes.jpg);
+    background-size: cover;
+    width: 290px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #movies {
+    background-image: url(../img/category-movies.jpg);
+    background-size: cover;
+    width: 290px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #movies:hover {
+    background-image: url(../img/category-movies.jpg);
+    background-size: cover;
+    width: 290px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #music {
+    background-image: url(../img/category-music.jpg);
+    background-size: cover;
+    width: 290px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #music:hover {
+    background-image: url(../img/category-music.jpg);
+    background-size: cover;
+    width: 290px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #places {
+    background-image: url(../img/category-places.jpeg);
+    background-size: cover;
+    width: 290px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #places:hover {
+    background-image: url(../img/category-places.jpeg);
+    background-size: cover;
+    width: 290px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+  #books {
+    background-image: url(../img/category-books.jpg);
+    background-size: cover;
+    width: 290px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transition: transform .2s;
+  }
+
+  #books:hover {
+    background-image: url(../img/category-books.jpg);
+    background-size: cover;
+    width: 290px;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    transform: scale(1.5);
+  }
+
+
+  #subcategory {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1em;
+    color: beige;
+    font-size: xx-large;
+    font-style: italic;
+    margin: 1.5em;
+  }
+
+  .subgenres {
+    width: 18vw;
+  }
+
+  #sub-music {
+    background-image: url(../img/category-music.jpg);
+    background-size: cover;
+    width: 45vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+  }
+
+  #location img {
+    width: 90vw;
+    height: 30vh;
+    margin: 1.5em;
+  }
+
+  .container {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 95vw;
+    margin: .8em;
+    padding: 0;
+    justify-content: center;
+    gap: 0.5em;
+
+  }
+
+  .img-container img {
+    object-fit: cover;
+    width: 40vw;
+    height: 30vh;
+  }
+
+  #explanation {
+
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 68vh;
+
+  }
+
+  #work {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 68vh;
+
+  }
+
+
+
+  .header {
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    position: static;
+    width: 100vw;
+    height: 7vh;
+  }
+
+  .content-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  #content {
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    text-align: center;
+
+  }
+
+  #content h1 {
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
   .content-image {
     width: 60vw;
