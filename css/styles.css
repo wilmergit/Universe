@@ -1,6 +1,9 @@
-* {
+body {
   margin: 0;
   padding: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -24,6 +27,44 @@
 
 }
 
+#content {
+  /*Slogan and photo*/
+  display: flex;
+  margin-top: 7vh;
+  color: rgb(179, 179, 167);
+  font-size: xx-large;
+
+}
+
+#content h1 {
+  /*Slogan*/
+  margin-left: 0.8em;
+  width: 20vw;
+}
+
+#header-section{
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#header-section #galaxy{ 
+  width: 100%;
+  height: 90%;
+  object-fit: fill;
+  position: absolute;
+}
+
+#header-section #planets{
+  width: 100%;
+  height: 90%;
+  object-fit: contain;
+  position: absolute;
+  overflow: hidden;
+  
+}
 
 #side-menu {
   /*Menu*/
@@ -71,19 +112,16 @@
   margin: 0.3em;
   font-size: xx-large;
   color: beige;
-  height: 5vh;
 
 }
 
-.options {
-  /*div de log in y sign up*/
-  display: flex;
-
-
+.header a{
+  text-decoration: none;
+  color: beige;
 }
 
 .header h2 {
-  /*log in y sign up*/
+  /*Universe*/
   margin: 0.7em;
   padding: 0.7em;
   font-size: small;
@@ -99,27 +137,6 @@
 
 .header h2:hover {
   background-color: rgb(83, 30, 180);
-}
-
-#content {
-  /*Slogan and photo*/
-  display: flex;
-
-  margin-top: 7vh;
-  color: rgb(179, 179, 167);
-  font-size: xx-large;
-
-}
-
-#content h1 {
-  /*Slogan*/
-  margin-left: 0.8em;
-  width: 20vw;
-}
-
-#content img {
-  /*starting image*/
-  margin-left: 16vw;
 }
 
 body h3 {
@@ -153,7 +170,7 @@ body h3 {
   text-align: center;
   font-size: xx-large;
   margin: 0.5em;
-  color: grey;
+  color: rgb(175, 166, 166);
 
 }
 
@@ -177,7 +194,7 @@ body h3 {
 }
 
 .subgenres:hover {
-  background-color: rgb(83, 30, 180);
+  background-color: rgb(53, 30, 180);
 }
 
 #sub-music {
@@ -417,7 +434,7 @@ body h3 {
 .img-container img {
   object-fit: fill;
   width: 360px;
-  height: 360px;
+  height: 340px;
   transition: transform .2s;
 
 }
@@ -425,10 +442,10 @@ body h3 {
 .img-container img:hover {
   object-fit: fill;
   width: 360px;
-  height: 360px;
+  height: 340px;
   border-radius: 50%;
   transform: scale(1.5);
-  box-shadow: 0 8px 16px 0 rgb(83, 30, 180), 0 6px 20px 0 rgb(83, 30, 180);
+  box-shadow: 0 8px 16px 0  rgb(53, 30, 180), 0 6px 20px 0  rgb(53, 30, 180);
 
 }
 
@@ -445,7 +462,7 @@ body h3 {
   text-align: center;
   font-size: xx-large;
   margin: 0.5em;
-  color: grey;
+  color:  rgb(175, 166, 166);
 
 }
 
@@ -461,24 +478,26 @@ body h3 {
 /*-------------------------Body------------------------------------*/
 
 body {
-  background: linear-gradient(rgb(83, 30, 180), rgb(0, 0, 0));
+  background-image: url(../img/galaxy.jpg);
   background-attachment: fixed;
   overflow-x: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 /*------------------------Footer-----------------------------------*/
 
 footer {
-  height: 12vh;
-  background-color: rgba(83, 30, 180, 0.527);
+  height: 15vh;
+  background-color: rgba(135, 135, 135, 0.672);
   font-size: larger;
   color: beige;
   text-align: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-evenly;
   border-radius: 27% 27% 0% 0%;
-
+  
 }
 
 footer p a {
@@ -489,8 +508,29 @@ footer p a {
 
 /*-------------------------Media queries-------------------------------*/
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
+/* Small devices (portrait tablets and large phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  #header-section{
+    position: relative;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  #header-section #galaxy{ 
+    width: 100%;
+    height: 90%;
+    object-fit: fill;
+    position: absolute;
+  }
+  
+  #header-section #planets{
+    width: 100%;
+    height: 90%;
+    object-fit: contain;
+    position: absolute;
+  }
+ 
   .content-image {
     width: 60vw;
     padding: .5em;
@@ -697,23 +737,16 @@ footer p a {
     width: 40vw;
     height: 30vh;
   }
-
+  
   #explanation {
 
-
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    height: 68vh;
-
+    height: 50%;
   }
-
+  
   #work {
-
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    height: 68vh;
+    height: 50%;
 
   }
 

@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  height: 100%;
+  width: 100%;
+
+}
+
+.header{
+  
+  background-color: black;
+  position: fixed;
+  width: 100vw;
+  height: 7vh;
+
+}
+
+.header-content{
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+}
+
+.header i {
+  /*menu icon*/
+
+  font-size: 22px;
+  margin: 0.8em;
+  color: beige;
+
+}
+
+a {
+  /*universe*/
+  margin: 0.3em;
+  font-size: xx-large;
+  color: beige;
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+
+}
+
+#side-menu {
+  /*Menu*/
+  background: linear-gradient(rgb(55, 54, 56), rgb(0, 0, 0));
+  width: 100vw;
+  height: 20vh;
+  visibility: hidden;
+  position: fixed;
+  border-radius: 0% 0% 27% 27%;
+}
+
+.side-menu-hidden {
+  /*Menu hidden*/
+  transform: translateX(-90vw);
+}
+
+.side-menu-visible {
+  /*Menu visible*/
+  transform: translateX(0);
+}
+
+#side-menu ul {
+  /*Menu Options*/
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  font-size: x-large;
+
+}
+
+#side-menu a {
+  /*Links*/
+  color: beige;
+  text-decoration: none;
+
+}
+
+#side-menu a:hover {
+  color: rgb(83, 30, 180);
+}
+
+
+
+
+
+/*-------------------------Body------------------------------------*/
+
+body {
+  background-image: url(../img/galaxy.jpg);
+  background-attachment: fixed;
+  overflow-x: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+/*-------------------------Media queries-------------------------------*/
+
+/* Small devices (portrait tablets and large phones, 600px and down) */
+@media only screen and (max-width: 600px) {}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {}
+
+/* Large devices (laptops/desktops, 1020px and up) */
+@media only screen and (min-width: 1020px) {}
