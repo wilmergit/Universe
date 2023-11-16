@@ -26,6 +26,7 @@ If you are using VisualStudioCode we recommend some extensions like:
   - Html
   - Css
   - JavaScript
+  - Bootstrap 5
 
 ## Author
 

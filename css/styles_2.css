@@ -1,94 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather+Sans:ital,wght@1,500&display=swap');
+
 body {
   margin: 0;
   padding: 0;
   border: 0;
   height: 100%;
   width: 100%;
+  font-family: 'Lobster', sans-serif;
+  font-family: 'Merriweather Sans', sans-serif;
 
 }
 
-.header{
-  
+.bt {
   background-color: black;
-  position: fixed;
-  width: 100vw;
-  height: 7vh;
-
+  color: white;
+  border-style: ridge;
+  border-radius: 23% 23% 23% 23%;
+  margin: 1em;
 }
 
-.header-content{
-  display: flex;
-  justify-content: space-between;
-  width: 50%;
+nav {
+  border-radius: 0% 0% 18% 18%;
 }
 
-.header i {
-  /*menu icon*/
-
-  font-size: 22px;
-  margin: 0.8em;
-  color: beige;
-
+.container {
+  border-style: groove;
+  border-color: black;
+  border-radius: 17px;
+  background-color: rgba(0, 0, 0, 0.41);
 }
 
-a {
-  /*universe*/
-  margin: 0.3em;
-  font-size: xx-large;
-  color: beige;
-  display: flex;
-  justify-content: space-between;
-  text-decoration: none;
-
+#error-username-required {
+  display: none;
+  color: red;
 }
 
-#side-menu {
-  /*Menu*/
-  background: linear-gradient(rgb(55, 54, 56), rgb(0, 0, 0));
-  width: 100vw;
-  height: 20vh;
-  visibility: hidden;
-  position: fixed;
-  border-radius: 0% 0% 27% 27%;
+#error-email-required {
+  display: none;
+  color: red;
 }
 
-.side-menu-hidden {
-  /*Menu hidden*/
-  transform: translateX(-90vw);
+#error-password-required {
+  display: none;
+  color: red;
 }
 
-.side-menu-visible {
-  /*Menu visible*/
-  transform: translateX(0);
+a img {
+  height: 2em;
 }
-
-#side-menu ul {
-  /*Menu Options*/
-  display: flex;
-  justify-content: space-around;
-  list-style: none;
-  font-size: x-large;
-
-}
-
-#side-menu a {
-  /*Links*/
-  color: beige;
-  text-decoration: none;
-
-}
-
-#side-menu a:hover {
-  color: rgb(83, 30, 180);
-}
-
-
-
 
 
 /*-------------------------Body------------------------------------*/
 
 body {
+
   background-image: url(../img/galaxy.jpg);
   background-attachment: fixed;
   overflow-x: hidden;

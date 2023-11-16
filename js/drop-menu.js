@@ -1,22 +1,22 @@
 function initialize() {
-  const menuIcon = document.getElementById("menu-icon");
-  menuIcon.addEventListener("click", showSideMenu);
+  const MENU_ICON = document.getElementById("menu-icon");
+  MENU_ICON.addEventListener("click", showSideMenu);
 
-  const closeMenu = document.getElementById("close-menu");
-  closeMenu.addEventListener("click", hideSideMenu);
+  const CLOSE_MENU = document.getElementById("close-menu");
+  CLOSE_MENU.addEventListener("click", hideSideMenu);
 
-  const closeOption = document.getElementById("menu-options");
-  closeOption.addEventListener("click", hideSideMenu);
+  const CLOSE_OPTION = document.getElementById("menu-options");
+  CLOSE_OPTION.addEventListener("click", hideSideMenu);
 }
 
 function showSideMenu() {
-  const sideMenu = document.getElementById("side-menu");
-  sideMenu.style.visibility = "visible";
+  const SIDE_MENU = document.getElementById("side-menu");
+  SIDE_MENU.style.visibility = "visible";
 }
 
 function hideSideMenu() {
-  const sideMenu = document.getElementById("side-menu");
-  sideMenu.style.visibility = "hidden";
+  const SIDE_MENU = document.getElementById("side-menu");
+  SIDE_MENU.style.visibility = "hidden";
 }
 
 
