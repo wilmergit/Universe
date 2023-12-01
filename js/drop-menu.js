@@ -11,12 +11,12 @@ function initialize() {
 
 function showSideMenu() {
   const SIDE_MENU = document.getElementById("side-menu");
-  SIDE_MENU.style.visibility = "visible";
+  SIDE_MENU.style.left = "0vw";
 }
 
 function hideSideMenu() {
   const SIDE_MENU = document.getElementById("side-menu");
-  SIDE_MENU.style.visibility = "hidden";
+  SIDE_MENU.style.left = "-90vw";
 }
 
 

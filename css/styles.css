@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather+Sans:ital,wght@1,500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Lobster&family=Merriweather+Sans:ital,wght@1,500&family=Roboto:wght@100&display=swap');
 
 body {
   margin: 0;
@@ -6,10 +6,133 @@ body {
   border: 0;
   height: 100%;
   width: 100%;
+  font-family: 'Lilita One', sans-serif;
   font-family: 'Lobster', sans-serif;
   font-family: 'Merriweather Sans', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+.slider-container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+}
+
+.slider-images{
+  display: flex;
+  align-items: center;
+  gap: 21px;
+  
+}
+
+.slider-images img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 6px;
+  
+}
+
+.slider-img{
+  width: 110px;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  transition: 0.7s ease;
+  
+  
+}
 
 
+.slider-images .slider-img:first-child, .slider-images .slider-img:last-child{
+  height: 480px;
+}
+
+.slider-images .slider-img:nth-child(2), .slider-images .slider-img:nth-child(5){
+  height: 560px;
+}
+
+.slider-images .slider-img:nth-child(3), .slider-images .slider-img:nth-child(4), .slider-images .slider-img:nth-child(5){
+  height: 665px;
+}
+
+.slider-images .slider-img:nth-child(6){
+  height: 560px;
+}
+
+
+.slider-container h1{
+  font-family: "Jost", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  text-align: left;
+  text-transform: uppercase;
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: -50%;
+  transform: rotate(270deg);
+  transition: 0.7s ease;
+}
+
+#park{
+  left: -15%;
+}
+
+.details{
+  position: absolute;
+  bottom: 43px;
+  left: 43px;
+}
+
+.details h2{
+  font-family: "Jost", sans-serif;
+  font-size: 26px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 44px;
+  text-align: left;
+  color: white;
+  text-transform: uppercase;
+  transition: 0.7s ease;
+  display: none;
+}
+
+.details p{
+  font-family: "Jost", sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+  line-height: 33px;
+  text-align: left;
+  color: white;
+  text-transform: uppercase;
+  transition: 0.7s ease;
+  display: none;
+}
+
+.slider-img-active{
+  width: 766px !important;
+  height: 750px !important;
+}
+
+.slider-img-active h1{
+  display: none;
+}
+
+.slider-img-active .details p, .slider-img-active .details h2{
+  display: block;
+}
+
+.texts{
+  border-radius: 10px;
+  background-color: rgb(251, 37, 118);
+  border-left: 5em;
+  border-right: 5em;
 }
 
 
@@ -17,12 +140,26 @@ body {
 
   display: flex;
   justify-content: space-between;
-  background-color: black;
+  align-items: center;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgba(255, 255, 255, .1);
   position: fixed;
+  border-radius: 32px;
+  background-color: rgba(17, 17, 17, .8);
   width: 100vw;
-  height: 7vh;
-  border-radius: 0% 0% 18% 18%;
+  height: 8vh;
+  backdrop-filter: blur(30px);
+  z-index: 99;
+  margin-top: 1em;
+  overflow: hidden;
 
+}
+
+.header-container{
+
+  display: flex;
+  justify-content: center;
 }
 
 .header i {
@@ -30,23 +167,24 @@ body {
 
   font-size: 22px;
   margin: 0.8em;
-  color: beige;
+  color: white;
+
 
 }
 
-#content {
+.content {
   /*Slogan and photo*/
   display: flex;
-  margin-top: 7vh;
-  color: rgb(179, 179, 167);
+  margin-top: 10em;
   font-size: xx-large;
 
 }
 
-#content h1 {
+.content h1 {
   /*Slogan*/
   margin-left: 0.8em;
   width: 20vw;
+  color: white;
 }
 
 #header-section {
@@ -75,42 +213,39 @@ body {
 
 #side-menu {
   /*Menu*/
-  background: linear-gradient(rgb(55, 54, 56), rgb(0, 0, 0));
-  width: 100vw;
-  height: 20vh;
-  visibility: hidden;
+  background: rgb(17, 17, 17);
+  width: 32vw;
+  height: 8vh;
   position: fixed;
-  border-radius: 0% 0% 27% 27%;
+  border-radius: 32px;
+  align-items: center;
+  border-color: rgba(255, 255, 255, .1);
+  border-width: 1px;
+  display: flex;
+  flex-direction: row;
+  transition: position, .8s;
 }
 
-.side-menu-hidden {
-  /*Menu hidden*/
-  transform: translateX(-90vw);
-}
 
-.side-menu-visible {
-  /*Menu visible*/
-  transform: translateX(0);
-}
 
 #side-menu ul {
   /*Menu Options*/
   display: flex;
-  justify-content: space-around;
+  gap: 2em;
   list-style: none;
-  font-size: x-large;
+  font-size: large;
 
 }
 
 #side-menu a {
   /*Links*/
-  color: beige;
+  color: white;
   text-decoration: none;
 
 }
 
 #side-menu a:hover {
-  color: rgb(83, 30, 180);
+  color: rgb(251, 37, 118);
 }
 
 
@@ -118,13 +253,13 @@ body {
   /*universe*/
   margin: 0.3em;
   font-size: xx-large;
-  color: beige;
+  color: white;
 
 }
 
 .header a {
   text-decoration: none;
-  color: beige;
+  color: rgb(12, 19, 79);
 }
 
 .header h2 {
@@ -133,32 +268,71 @@ body {
   padding: 0.7em;
   font-size: small;
   text-align: center;
-  color: beige;
   height: 2vh;
   width: 5vw;
-  border-radius: 1em;
-  border-style: groove;
-  border-color: rgb(61, 61, 61);
+  border-radius: 10px;
+  border-style: solid;
+  background-color: rgb(251, 37, 118);
+  border-color: rgba(255, 255, 255, .1);
+
 
 }
 
 .header h2:hover {
-  background-color: rgb(83, 30, 180);
+  background-color: rgb(92, 70, 156);
+  border-color: rgb(92, 70, 156);
+}
+
+.first-section{
+  background-color: rgba(255, 255, 255, .1);
+  margin: auto;
+  height: 68vh;
+  width: 90vw;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 25px;
+
 }
 
 body h3 {
   /*Text*/
   text-align: center;
-  color: beige;
+  color: white;
   font-size: xx-large;
 
 }
+
+
+
+/* width */
+::-webkit-scrollbar {
+  width: 20px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, .1); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: white; 
+}
+
+
 
 /*----------------------------------Funcion 1 y explicacion----------------------------------------*/
 
 .reasons {
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
 }
 
 #explanation {
@@ -177,7 +351,8 @@ body h3 {
   text-align: center;
   font-size: xx-large;
   margin: 0.5em;
-  color: rgb(175, 166, 166);
+  color: black;
+  font-weight: bold;
 
 }
 
@@ -188,30 +363,122 @@ body h3 {
   margin-right: 2em;
   margin-left: 2em;
   margin-top: 0.5em;
-  color: beige;
+  color: black;
+  font-weight: bold;
+}
+
+.second-section{
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
+  width: 90vw;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 25px;
+  margin-bottom: 2em;
+}
+
+.section-container{
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+.third-section{
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
+  width: 50%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 25px;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.third-section:hover{
+  background-color: rgb(251, 37, 118);
+}
+
+.third-section h4{
+  font-size: x-large;
+  color: white;
+}
+
+.third-section .logos{
+  display: flex;
+  flex-direction: row;
+}
+
+.third-section img{
+  height: 144px;
+  width: 144px;
+}
+
+.third-section p{
+  color: white;
+  font-size: xx-large;
+}
+
+.fourth-section{
+  background-color: rgba(255, 255, 255, .1);
+  border-radius: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
+  width: 50%;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 25px;
+  margin-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+}
+
+.fourth-section:hover{
+  background-color: rgb(251, 37, 118);
+}
+
+.fourth-section p{
+  color: white;
 }
 
 #subcategory {
   display: flex;
-  gap: 3em;
-  color: beige;
+  flex-direction: row;
+  gap: 2em;
+  color: white;
   font-size: xx-large;
   font-style: italic;
   margin: 1.5em;
+  border-radius: 10px;
+  justify-content: center;
 }
 
 .subgenres:hover {
-  background-color: rgb(53, 30, 180);
+  background-color: rgb(251, 37, 118);
+  
 }
 
 #sub-music {
   background-image: url(../img/category-music.jpg);
   background-size: cover;
-  width: 36vw;
-  height: 30vh;
+  width: 200px;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: end;
+  border-radius: 10px;
 }
 
 .genres {
@@ -222,15 +489,20 @@ body h3 {
   text-align: center;
   gap: .5em;
   display: flex;
-  flex-direction: column;
-
+  flex-wrap: wrap;
+  flex-direction: row;
 
 }
 
 .subgenres {
-  background: rgba(0, 0, 0, 0.336);
-  width: 10vw;
-  height: 4vh;
+  background: black;
+  width: 160px;
+  height: 50px;
+  border-radius: 15px;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 
 }
 
@@ -246,151 +518,85 @@ body h3 {
 /*-------------------------Category--------------------------------*/
 
 .image-container {
-
-  width: 98vw;
-  height: 30vh;
   display: flex;
-  gap: 10px;
-  justify-content: space-evenly;
-  margin: 1em;
-  color: beige;
-  font-size: x-large;
-  font-style: italic;
-}
-
-#games {
-  background-image: url(../img/category-games.jpg);
-  background-size: cover;
-  width: 270px;
-  height: 30vh;
-  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 95px;
+  gap: 1em;
+  margin-left: 1em;
+  margin-right: 1em;
   justify-content: center;
-  align-items: end;
-  transition: transform .2s;
 
 }
 
-#games:hover {
-  background-image: url(../img/category-games.jpg);
-  background-size: cover;
-  width: 270px;
-  height: 30vh;
+.image-container img{
+  transition: transform .8s;
+}
+
+.image-container img:hover{
+  transform: scale(1.3);
+}
+
+.first-row{
   display: flex;
-  justify-content: center;
-  align-items: end;
-  transform: scale(1.5);
-
+  flex-direction: column;
+  gap: 1.2em;
 }
 
-#clothes {
-  background-image: url(../img/category-clothes.jpg);
-  background-size: cover;
-  width: 270px;
-  height: 30vh;
+.second-row{
   display: flex;
-  justify-content: center;
-  align-items: end;
-  transition: transform .2s;
+  flex-direction: column;
+  gap: 1.2em;
 }
 
-#clothes:hover {
-  background-image: url(../img/category-clothes.jpg);
-  background-size: cover;
-  width: 270px;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  transform: scale(1.5);
+#games img{
+  width: 250px;
+  height: 206px;
+  border-radius: 15px;
+  
 }
 
-#movies {
-  background-image: url(../img/category-movies.jpg);
-  background-size: cover;
-  width: 270px;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  transition: transform .2s;
+#clothes img{
+  width: 250px;
+  height: 180px;
+  border-radius: 15px;
+  
+}
+#movies img{
+  width: 250px;
+  height: 180px;
+  border-radius: 15px;
+
 }
 
-#movies:hover {
-  background-image: url(../img/category-movies.jpg);
-  background-size: cover;
-  width: 270px;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  transform: scale(1.5);
+#music img{
+  width: 250px;
+  height: 180px;
+  border-radius: 15px;
+  
 }
 
-#music {
-  background-image: url(../img/category-music.jpg);
-  background-size: cover;
-  width: 270px;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  transition: transform .2s;
+#places img{
+  width: 250px;
+  height: 180px;
+  border-radius: 15px;
+  
 }
 
-#music:hover {
-  background-image: url(../img/category-music.jpg);
-  background-size: cover;
-  width: 270px;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  transform: scale(1.5);
+#books img{
+  width: 250px;
+  height: 405px;
+  border-radius: 15px;
+  
 }
 
-#places {
-  background-image: url(../img/category-places.jpeg);
-  background-size: cover;
-  width: 270px;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  transition: transform .2s;
+#comics img{
+  width: 250px;
+  height: 206px;
+  border-radius: 15px;
 }
 
-#places:hover {
-  background-image: url(../img/category-places.jpeg);
-  background-size: cover;
-  width: 270px;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  transform: scale(1.5);
-}
 
-#books {
-  background-image: url(../img/category-books.jpg);
-  background-size: cover;
-  width: 270px;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  transition: transform .2s;
-}
-
-#books:hover {
-  background-image: url(../img/category-books.jpg);
-  background-size: cover;
-  width: 270px;
-  height: 30vh;
-  display: flex;
-  justify-content: center;
-  align-items: end;
-  transform: scale(1.5);
-}
 
 /*---------------------------second function---------------------------------*/
 
@@ -399,12 +605,14 @@ body h3 {
   flex-direction: column;
   margin: 1em;
   align-items: center;
+
 }
 
 #location img {
   width: 37vw;
   height: 30vh;
   margin: 1.5em;
+  border-radius: 10px;
 
 }
 
@@ -412,28 +620,16 @@ body h3 {
 #location p {
   font-size: xx-large;
   text-align: center;
-  color: beige;
+  color: rgb(194, 217, 255);
 
 }
 
-.container {
-  /*Final part*/
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  width: 100vw;
-  margin: .8em;
-  padding: 0;
-  justify-content: center;
-  gap: 0.5em;
 
-}
 
 .img-container {
   display: flex;
   padding: 0;
   justify-content: center;
-
 
   gap: 0.5em;
 }
@@ -443,6 +639,7 @@ body h3 {
   width: 360px;
   height: 340px;
   transition: transform .2s;
+  border-radius: 15px;
 
 }
 
@@ -451,8 +648,8 @@ body h3 {
   width: 360px;
   height: 340px;
   border-radius: 50%;
-  transform: scale(1.5);
-  box-shadow: 0 8px 16px 0 rgb(53, 30, 180), 0 6px 20px 0 rgb(53, 30, 180);
+  transform: scale(1.4);
+  box-shadow: 0 8px 16px 0 rgb(194, 217, 255), 0 6px 20px 0 rgb(194, 217, 255);
 
 }
 
@@ -469,7 +666,7 @@ body h3 {
   text-align: center;
   font-size: xx-large;
   margin: 0.5em;
-  color: rgb(175, 166, 166);
+  color: black;
 
 }
 
@@ -479,13 +676,14 @@ body h3 {
   margin-right: 2em;
   margin-left: 2em;
   margin-top: 0.5em;
-  color: beige;
+  color: black;
+  font-weight: bold;
 }
 
 /*-------------------------Body------------------------------------*/
 
 body {
-  background-image: url(../img/galaxy.jpg);
+  background-color: black;
   background-attachment: fixed;
   overflow-x: hidden;
   background-size: cover;
@@ -496,7 +694,7 @@ body {
 
 footer {
   height: 15vh;
-  background-color: black;
+  background-color: rgb(12, 19, 79);
   font-size: larger;
   color: beige;
   text-align: center;
@@ -550,171 +748,16 @@ footer p {
 
   }
 
-
-
-  .image-container {
-
-    width: 92vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    margin: 1em;
-    color: beige;
-    font-size: x-large;
-    font-style: italic;
-  }
-
-  #games {
-    background-image: url(../img/category-games.jpg);
-    background-size: cover;
-    width: 290px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-
-  }
-
-  #games:hover {
-    background-image: url(../img/category-games.jpg);
-    background-size: cover;
-    width: 290px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-
-  }
-
-  #clothes {
-    background-image: url(../img/category-clothes.jpg);
-    background-size: cover;
-    width: 290px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #clothes:hover {
-    background-image: url(../img/category-clothes.jpg);
-    background-size: cover;
-    width: 290px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #movies {
-    background-image: url(../img/category-movies.jpg);
-    background-size: cover;
-    width: 290px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #movies:hover {
-    background-image: url(../img/category-movies.jpg);
-    background-size: cover;
-    width: 290px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #music {
-    background-image: url(../img/category-music.jpg);
-    background-size: cover;
-    width: 290px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #music:hover {
-    background-image: url(../img/category-music.jpg);
-    background-size: cover;
-    width: 290px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #places {
-    background-image: url(../img/category-places.jpeg);
-    background-size: cover;
-    width: 290px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #places:hover {
-    background-image: url(../img/category-places.jpeg);
-    background-size: cover;
-    width: 290px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #books {
-    background-image: url(../img/category-books.jpg);
-    background-size: cover;
-    width: 290px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #books:hover {
-    background-image: url(../img/category-books.jpg);
-    background-size: cover;
-    width: 290px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-
   #subcategory {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
-    color: beige;
+    color: white;
     font-size: xx-large;
     font-style: italic;
     margin: 1.5em;
   }
 
-  .subgenres {
-    width: 18vw;
-  }
 
   #sub-music {
     background-image: url(../img/category-music.jpg);
@@ -732,18 +775,6 @@ footer p {
     margin: 1.5em;
   }
 
-  .container {
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 95vw;
-    margin: .8em;
-    padding: 0;
-    justify-content: center;
-    gap: 0.5em;
-
-  }
 
   .img-container img {
     object-fit: cover;
@@ -768,10 +799,10 @@ footer p {
   .header {
     display: flex;
     justify-content: space-between;
-    background-color: black;
-    position: static;
+
+    position: fixed;
     width: 100vw;
-    height: 7vh;
+    height: 8vh;
   }
 
   .content-image img {
@@ -780,7 +811,7 @@ footer p {
     object-fit: cover;
   }
 
-  #content {
+  .content {
     display: flex;
     flex-direction: column;
     font-size: large;
@@ -788,7 +819,7 @@ footer p {
 
   }
 
-  #content h1 {
+  .content h1 {
     width: 100vw;
     margin: 0;
   }
@@ -805,170 +836,21 @@ footer p {
 
 
 
-  .image-container {
 
-    width: 92vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin: 1em;
-    color: beige;
-    font-size: x-large;
-    font-style: italic;
-  }
-
-  #games {
-    background-image: url(../img/category-games.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-
-  }
-
-  #games:hover {
-    background-image: url(../img/category-games.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-
-  }
-
-  #clothes {
-    background-image: url(../img/category-clothes.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #clothes:hover {
-    background-image: url(../img/category-clothes.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #movies {
-    background-image: url(../img/category-movies.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #movies:hover {
-    background-image: url(../img/category-movies.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #music {
-    background-image: url(../img/category-music.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #music:hover {
-    background-image: url(../img/category-music.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #places {
-    background-image: url(../img/category-places.jpeg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #places:hover {
-    background-image: url(../img/category-places.jpeg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #books {
-    background-image: url(../img/category-books.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #books:hover {
-    background-image: url(../img/category-books.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
+ 
 
   #subcategory {
     display: flex;
     flex-wrap: wrap;
 
     gap: 1em;
-    color: beige;
+
     font-size: xx-large;
     font-style: italic;
     margin: 1.5em;
   }
 
-  .subgenres {
-    width: 25vw;
-  }
+
 
   #sub-music {
     background-image: url(../img/category-music.jpg);
@@ -986,18 +868,6 @@ footer p {
     margin: 1.5em;
   }
 
-  .container {
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 95vw;
-    margin: .8em;
-    padding: 0;
-    justify-content: center;
-    gap: 0.5em;
-
-  }
 
   .img-container img {
     object-fit: cover;
@@ -1029,10 +899,10 @@ footer p {
   .header {
     display: flex;
     justify-content: space-between;
-    background-color: black;
-    position: static;
+
+    position: fixed;
     width: 100vw;
-    height: 7vh;
+    height: 8vh;
   }
 
   .content-image img {
@@ -1041,7 +911,7 @@ footer p {
     object-fit: cover;
   }
 
-  #content {
+  .content {
     display: flex;
     flex-direction: column;
     font-size: large;
@@ -1049,7 +919,7 @@ footer p {
 
   }
 
-  #content h1 {
+  .content h1 {
     width: 100vw;
     margin: 0;
   }
@@ -1067,170 +937,19 @@ footer p {
 
 
 
-  .image-container {
-
-    width: 92vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin: 1em;
-    color: beige;
-    font-size: x-large;
-    font-style: italic;
-  }
-
-  #games {
-    background-image: url(../img/category-games.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-
-  }
-
-  #games:hover {
-    background-image: url(../img/category-games.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-
-  }
-
-  #clothes {
-    background-image: url(../img/category-clothes.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #clothes:hover {
-    background-image: url(../img/category-clothes.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #movies {
-    background-image: url(../img/category-movies.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #movies:hover {
-    background-image: url(../img/category-movies.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #music {
-    background-image: url(../img/category-music.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #music:hover {
-    background-image: url(../img/category-music.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #places {
-    background-image: url(../img/category-places.jpeg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #places:hover {
-    background-image: url(../img/category-places.jpeg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #books {
-    background-image: url(../img/category-books.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #books:hover {
-    background-image: url(../img/category-books.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
 
   #subcategory {
     display: flex;
     flex-wrap: wrap;
 
     gap: 1em;
-    color: beige;
+
     font-size: xx-large;
     font-style: italic;
     margin: 1.5em;
   }
 
-  .subgenres {
-    width: 25vw;
-  }
+
 
   #sub-music {
     background-image: url(../img/category-music.jpg);
@@ -1248,18 +967,6 @@ footer p {
     margin: 1.5em;
   }
 
-  .container {
-
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 95vw;
-    margin: .8em;
-    padding: 0;
-    justify-content: center;
-    gap: 0.5em;
-
-  }
 
   .img-container img {
     object-fit: cover;
@@ -1290,10 +997,10 @@ footer p {
   .header {
     display: flex;
     justify-content: space-between;
-    background-color: black;
-    position: static;
+
+    position: fixed;
     width: 100vw;
-    height: 7vh;
+    height: 8vh;
   }
 
   .content-image img {
@@ -1302,7 +1009,7 @@ footer p {
     object-fit: cover;
   }
 
-  #content {
+  .content {
     display: flex;
     flex-direction: column;
     font-size: large;
@@ -1310,7 +1017,7 @@ footer p {
 
   }
 
-  #content h1 {
+  .content h1 {
     width: 100vw;
     margin: 0;
   }
@@ -1324,168 +1031,20 @@ footer p {
 
   }
 
-  .image-container {
 
-    width: 92vw;
-    height: 60vh;
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    justify-content: center;
-    margin: 1em;
-    color: beige;
-    font-size: x-large;
-    font-style: italic;
-  }
-
-  #games {
-    background-image: url(../img/category-games.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-
-  }
-
-  #games:hover {
-    background-image: url(../img/category-games.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-
-  }
-
-  #clothes {
-    background-image: url(../img/category-clothes.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #clothes:hover {
-    background-image: url(../img/category-clothes.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #movies {
-    background-image: url(../img/category-movies.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #movies:hover {
-    background-image: url(../img/category-movies.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #music {
-    background-image: url(../img/category-music.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #music:hover {
-    background-image: url(../img/category-music.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #places {
-    background-image: url(../img/category-places.jpeg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #places:hover {
-    background-image: url(../img/category-places.jpeg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
-
-  #books {
-    background-image: url(../img/category-books.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transition: transform .2s;
-  }
-
-  #books:hover {
-    background-image: url(../img/category-books.jpg);
-    background-size: cover;
-    width: 270px;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-    transform: scale(1.5);
-  }
 
 
   #subcategory {
     display: flex;
     flex-wrap: wrap;
     gap: 1em;
-    color: beige;
+
     font-size: xx-large;
     font-style: italic;
     margin: 1.5em;
   }
 
-  .subgenres {
-    width: 25vw;
-  }
+
 
   #sub-music {
     background-image: url(../img/category-music.jpg);
@@ -1503,18 +1062,7 @@ footer p {
     margin: 1.5em;
   }
 
-  .container {
 
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 95vw;
-    margin: .8em;
-    padding: 0;
-    justify-content: center;
-    gap: 0.5em;
-
-  }
 
   .img-container img {
     object-fit: cover;
@@ -1545,11 +1093,13 @@ footer p {
   .header {
     display: flex;
     justify-content: space-between;
-    background-color: black;
-    position: static;
-    width: 100vw;
-    height: 7vh;
+    
+    position: fixed;
+    width: 80vw;
+    height: 8vh;
   }
+
+
 
   .content-image img {
     width: 100%;
@@ -1557,7 +1107,7 @@ footer p {
     object-fit: cover;
   }
 
-  #content {
+  .content {
     display: flex;
     flex-direction: column;
     font-size: large;
@@ -1565,7 +1115,7 @@ footer p {
 
   }
 
-  #content h1 {
+  .content h1 {
     width: 100vw;
     margin: 0;
   }
@@ -1574,20 +1124,7 @@ footer p {
 /* Large devices (laptops/desktops, 1020px and up) */
 @media only screen and (min-width: 1020px) {
 
-  .image-container {
 
-    width: 92vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin: 3.5em;
-    color: beige;
-    font-size: x-large;
-    font-style: italic;
-  }
 
   #function {
     margin: 1em;
@@ -1616,14 +1153,13 @@ footer p {
 
   #subcategory {
     display: flex;
-    gap: 3em;
-    color: beige;
+    flex-direction: row;
+    gap: 1em;
+
     font-size: xx-large;
     font-style: italic;
     align-items: center;
-    justify-content: space-around;
-    margin: 4.5em;
-    height: 50vh;
+
   }
 
   .genres {
@@ -1634,8 +1170,9 @@ footer p {
     text-align: center;
     gap: .5em;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
-
+  
   }
 
 
