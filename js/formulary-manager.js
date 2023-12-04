@@ -1,6 +1,4 @@
-let users = [
-
-];
+let users = [];
 
 function initialize() {
   const USER_FORM = document.getElementById("users-form");
@@ -15,16 +13,14 @@ function addUser(event) {
   const EMAIL = event.target.email.value;
   const PASSWORD = event.target.pswd.value;
 
-  if ((USERNAME != "") && (EMAIL != "") && (PASSWORD != "")) {
+  if (USERNAME != "" && EMAIL != "" && PASSWORD != "") {
     users.push({
-      username: USERNAME
-    })
+      username: USERNAME,
+    });
     showUsers();
-  }
-  else {
+  } else {
     let users = [];
   }
-
 }
 
 function showUsers() {
@@ -34,7 +30,12 @@ function showUsers() {
 
   for (let i = 0; i < users.length; i++) {
     USERS_LIST.innerHTML += `<li>${users[i].username}<button class="bt" onclick="deleteUser(${i})">DELETE</button></li>`;
+    USERS_LIST.innerHTML += `<li>${users[i].username}<button class="bt" onclick="modifyUser(${i})">MODIFY</button></li>`;
   }
+}
+
+function modifyUser(userId) {
+  USERNAME = userId.target.username.value;s
 }
 
 function deleteUser(userId) {

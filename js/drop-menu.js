@@ -19,6 +19,4 @@ function hideSideMenu() {
   SIDE_MENU.style.left = "-90vw";
 }
 
-
-
 initialize();
