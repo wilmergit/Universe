@@ -41,43 +41,43 @@
     </p>
   </div>
 
-  <div class="container my-5 text-white">
-    <h2>Form</h2>
-    <form id="users-form" action="formulary.html">
-      <div class="mb-3 mt-3">
-        <label for="username">Username</label>
-        <input id="username" name="username" type="text" class="form-control" placeholder="Enter Username" />
+  <div class="container">
+    <h1>Early Acess Formulary</h1>
+  </div>
+  <div class="container">
+    <div class="container mb-5">
+      <div class="row">
+        <form>
+          <div class="mb-3">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-control" id="inputEmail" >
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Username</label>
+            <input type="username" class="form-control" id="inputUsername" >
+          </div>
+          <div class="mb-3">
+            <label class="form-label">Password</label>
+            <input type="password" class="form-control" id="inputPassword" >
+          </div>
+          <button type="submit" class="btn btn-primary" id="btnAdd" onclick="addData()">Añadir</button>
+          <button type="submit" class="btn btn-primary" id="btnUpdate">Actualizar</button>
+        </form>
       </div>
-      <div class="mb-3 mt-3">
-        <label for="email">Email:</label>
-        <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" />
-      </div>
-      <div class="mb-2">
-        <label for="pwd">Password:</label>
-        <input type="password" class="form-control" id="pwd" placeholder="Enter password (min. 8 characters)"
-          name="pswd" />
-      </div>
-      <label for="comment">Reasons...</label>
-      <textarea class="form-control mb-3" rows="5" id="comment" name="text"></textarea>
-      <div class="form-check">
-        <input class="form-check-input bg-black border-white" type="checkbox" id="check1" name="Get news from us"
-          value="something" checked />
-        <label class="form-check-label">Get news from us</label>
-      </div>
-      <button id="Submit" onclick="addData()" type="submit" class="btn btn-primary border-black mt-3">
-        Submit
-      </button>
-    </form>
-    <div class="row">
-      <div class="col-sm-12 mt-3">
-        <div class="left-side">
-          <h2>Users List</h2>
-          <ul id="users-list"></ul>
-        </div>
-      </div>
+      <hr>
+      <table class="table table-bordered" id="tableData">
+        <thead>
+          <tr>
+            <th>Email</th>
+            <th>Username</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
     </div>
   </div>
-
   <script src="https://kit.fontawesome.com/6f5c749e7d.js" crossorigin="anonymous"></script>
   <script src="js/drop-menu.js"></script>
   <script src="js/formulary-validation.js"></script>

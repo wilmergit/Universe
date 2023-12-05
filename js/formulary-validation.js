@@ -1,81 +1,86 @@
-window.preventDefault();
 
-function validateUsersForm(event) {
-  var FORM_APPLY = event.target;
-  var USERNAME = FORM_APPLY["username"].value;
-  var EMAIL = FORM_APPLY["email"].value;
-  var PASSWORD = FORM_APPLY["pswd"].value;
+
+function validateForm() {
+
+  let USERNAME = document.getElementById('inputUsername').value;
+  let EMAIL = document.getElementById('inputEmail').value;
+  let PASSWORD = document.getElementById('inputPassword').value;
 
   if (USERNAME == "") {
-    alert("Username required");
+    alert('Username required');
     return false;
   }
 
   if (EMAIL == "") {
-    alert("Email required");
+    alert('Email required');
     return false;
   }
   else if (!email.includes("@")) {
-    alert("Invalid email address");
+    alert('Invalid email address');
     return false;
   }
 
   if (PASSWORD == "") {
-    alert("Password require");
+    alert('Password required');
     return false;
   }
 
   return true;
 }
 
-function showUsers() {
+document.addEventListener('DOMContentLoaded', function () {
+  ReadData();
+  }); 
 
-  var USERS_LIST;
-  if (localStorage.getItem("username") == null) {
+function readData(){
+  let USERS_LIST;
+  if (localStorage.getItem('USERS_LIST') == null) {
     USERS_LIST = [];
   }
   else {
-    USERS_LIST = JSON.parse(localStorage.getItem("username"));
+    USERS_LIST = JSON.parse(localStorage.getItem('USERS_LIST'));
   }
 
   var html = "";
 
   USERS_LIST.forEach(function (element, index) {
     html += "<tr>";
-    html += "<td>" + element.username + "</td>";
-    html += "<td>" + element.email + "</td>";
-    html += "<td>" + element.pswd + "</td>";
-    html += '<td><button onclick="deleteData(' + index + ')" class="btn btn-danger">DELETE</button><button onclick = "updateData(' + index + ')" class="btn btn-warning m-2">EDIT</button>';
-    html += "</tr>";
+    html += "<td>"+ element.email + "</td>"
+    html += "<td>"+ element.username + "</td>"
+    html += '<td><button onclick="deleteData('+ index +')" class="btn btn-danger">Eliminar</button> <button onclick="editData('+ index +')" class="btn btn-warning">Editar</button><td>';
+    html += "</tr>"
   });
 
-  document.querySelector("users-form").innerHTML = html;
+  document.getElementById('#tableData').innerHTML = html;
 }
 
-document.onload = showUsers();
-
-
+document.onload = readData(); 
 
 function addData() {
-  if (validateUsersForm() == true) {
-    var USERNAME = document.getElementById("username").value;
+  if (validateForm() == true) {
+    let USERNAME = document.getElementById('inputUsername').value;
+    let EMAIL = document.getElementById('inputEmail').value;
 
-    var USERS_LIST;
+    let USERS_LIST;
     
-    if (localStorage.getItem("username") == null) {
+    if (localStorage.getItem('USERS_LIST') == null) {
       USERS_LIST = [];
     }
     else {
-      USERS_LIST = JSON.parse(localStorage.getItem("username"));
+      USERS_LIST = JSON.parse(localStorage.getItem('USERS_LIST'));
     }
 
     USERS_LIST.push({
-      username: USERNAME,
+      email: EMAIL,
+      username: USERNAME
     });
 
-    localStorage.setItem("USERS_LIST", JSON.stringify(USERS_LIST));
-    showUsers();
-    document.getElementById("username").value = "";
+    localStorage.setItem('USERS_LIST', JSON.stringify(USERS_LIST));
+    
+    readData();
+    
+    document.getElementById('inputEmail').value = "";
+    document.getElementById('inputUsername').value = "";
 
   }
 }
