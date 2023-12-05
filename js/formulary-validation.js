@@ -1,40 +1,81 @@
-window.onload = initialize();
-
-function initialize() {
-  const FORM_APPLY = document.getElementById("users-form");
-  FORM_APPLY.addEventListener("submit", validateUsersForm);
-}
+window.preventDefault();
 
 function validateUsersForm(event) {
-  const FORM_APPLY = event.target;
+  var FORM_APPLY = event.target;
+  var USERNAME = FORM_APPLY["username"].value;
+  var EMAIL = FORM_APPLY["email"].value;
+  var PASSWORD = FORM_APPLY["pswd"].value;
 
-  const USERNAME = FORM_APPLY["username"].value;
-
-  if (!USERNAME || USERNAME == "") {
-    event.preventDefault();
-    console.log("* Este campo es obligatorio");
-    document.getElementById("error-username-required").style.display = "block";
-  } else {
-    document.getElementById("error-username-required").style.display = "none";
+  if (USERNAME == "") {
+    alert("Username required");
+    return false;
   }
 
-  const EMAIL = FORM_APPLY["email"].value;
-
-  if (!EMAIL || EMAIL == "") {
-    event.preventDefault();
-    console.log("* Este campo es obligatorio");
-    document.getElementById("error-email-required").style.display = "block";
-  } else {
-    document.getElementById("error-email-required").style.display = "none";
+  if (EMAIL == "") {
+    alert("Email required");
+    return false;
+  }
+  else if (!email.includes("@")) {
+    alert("Invalid email address");
+    return false;
   }
 
-  const PASSWORD = FORM_APPLY["pswd"].value;
+  if (PASSWORD == "") {
+    alert("Password require");
+    return false;
+  }
 
-  if (!PASSWORD || PASSWORD == "") {
-    event.preventDefault();
-    console.log("* Este campo es obligatorio");
-    document.getElementById("error-password-required").style.display = "block";
-  } else {
-    document.getElementById("error-password-required").style.display = "none";
+  return true;
+}
+
+function showUsers() {
+
+  var USERS_LIST;
+  if (localStorage.getItem("username") == null) {
+    USERS_LIST = [];
+  }
+  else {
+    USERS_LIST = JSON.parse(localStorage.getItem("username"));
+  }
+
+  var html = "";
+
+  USERS_LIST.forEach(function (element, index) {
+    html += "<tr>";
+    html += "<td>" + element.username + "</td>";
+    html += "<td>" + element.email + "</td>";
+    html += "<td>" + element.pswd + "</td>";
+    html += '<td><button onclick="deleteData(' + index + ')" class="btn btn-danger">DELETE</button><button onclick = "updateData(' + index + ')" class="btn btn-warning m-2">EDIT</button>';
+    html += "</tr>";
+  });
+
+  document.querySelector("users-form").innerHTML = html;
+}
+
+document.onload = showUsers();
+
+
+
+function addData() {
+  if (validateUsersForm() == true) {
+    var USERNAME = document.getElementById("username").value;
+
+    var USERS_LIST;
+    
+    if (localStorage.getItem("username") == null) {
+      USERS_LIST = [];
+    }
+    else {
+      USERS_LIST = JSON.parse(localStorage.getItem("username"));
+    }
+
+    USERS_LIST.push({
+      username: USERNAME,
+    });
+
+    localStorage.setItem("USERS_LIST", JSON.stringify(USERS_LIST));
+    showUsers();
+    document.getElementById("username").value = "";
+
   }
 }

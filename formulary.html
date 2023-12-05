@@ -47,18 +47,15 @@
       <div class="mb-3 mt-3">
         <label for="username">Username</label>
         <input id="username" name="username" type="text" class="form-control" placeholder="Enter Username" />
-        <span id="error-username-required">* Este campo es obligatorio</span>
       </div>
       <div class="mb-3 mt-3">
         <label for="email">Email:</label>
         <input type="email" class="form-control" id="email" placeholder="Enter email" name="email" />
-        <span id="error-email-required">* Este campo es obligatorio</span>
       </div>
       <div class="mb-2">
         <label for="pwd">Password:</label>
         <input type="password" class="form-control" id="pwd" placeholder="Enter password (min. 8 characters)"
           name="pswd" />
-        <span id="error-password-required">* Este campo es obligatorio</span>
       </div>
       <label for="comment">Reasons...</label>
       <textarea class="form-control mb-3" rows="5" id="comment" name="text"></textarea>
@@ -67,7 +64,7 @@
           value="something" checked />
         <label class="form-check-label">Get news from us</label>
       </div>
-      <button type="submit" class="btn btn-primary border-black mt-3">
+      <button id="Submit" onclick="addData()" type="submit" class="btn btn-primary border-black mt-3">
         Submit
       </button>
     </form>
@@ -84,7 +81,6 @@
   <script src="https://kit.fontawesome.com/6f5c749e7d.js" crossorigin="anonymous"></script>
   <script src="js/drop-menu.js"></script>
   <script src="js/formulary-validation.js"></script>
-  <script src="js/formulary-manager.js"></script>
 </body>
 
 </html>

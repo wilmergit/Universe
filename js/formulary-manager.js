@@ -24,25 +24,6 @@ function addUser(event) {
   }
 }
 
-function showUsers() {
-  const USERS_LIST = document.getElementById("users-list");
 
-  USERS_LIST.innerHTML = "";
-
-  for (let i = 0; i < users.length; i++) {
-    USERS_LIST.innerHTML += `<li>${users[i].username}<button class="bt" onclick="deleteUser(${i})">DELETE</button><button class="bt" onclick="modifyUser(${i})">MODIFY</button></li>`;
-  }
-}
-
-function modifyUser(username) {
-  const USERNAME = username.target.username.value;
-  USERNAME.value = username.value;
-  showUsers();
-}
-
-function deleteUser(userId) {
-  users.splice(userId, 1);
-  showUsers();
-}
 
 initialize();
