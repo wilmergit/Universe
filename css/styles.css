@@ -155,11 +155,14 @@ body {
 }
 
 .texts {
+
   border-radius: 10px;
   background-color: rgb(251, 37, 118);
   border-left: 5em;
   border-right: 5em;
-  height: 60vh;
+  height: 100vh;
+  width: 90%;
+  margin: auto;
 }
 
 .header {
@@ -913,7 +916,7 @@ hr {
   
   .first-section{
    
-    height: 48vh;
+    height: 90vh;
 
   }
 
@@ -926,8 +929,12 @@ hr {
     margin-top: 0;
   }
 
+  .last-container {
+    margin-top: 4em;
+  }
+
   .reasons{
-    margin-top: 2em;
+    margin-top: 3em;
   }
 
   #games img {
@@ -1002,7 +1009,8 @@ hr {
   }
 
   .slider-container{
-    margin: 4em;
+    margin-top: 500px;
+    margin-bottom: 20em;
   }
 
 
@@ -1060,10 +1068,6 @@ hr {
     width: 95%;
   }
 
-  .slider-container{
-    margin: .2em;
-    padding-bottom: 3em;
-  }
 
   .section-container {
     flex-direction: column-reverse;
@@ -1080,7 +1084,7 @@ hr {
   }
 
   .texts {
-    height: 50vh;
+    height: 140vh;
   }
 
   #work{
@@ -1317,7 +1321,7 @@ hr {
   }
 
   .texts {
-    height: 75vh;
+    height: 140vh;
   }
 
   #work{
@@ -1555,7 +1559,7 @@ hr {
   }
 
   .texts {
-    height: 110vh;
+    height: 130vh;
   }
 
   #work{

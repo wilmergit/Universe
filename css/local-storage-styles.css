@@ -19,6 +19,17 @@ body {
   margin-top: 10em;
 }
 
+#table-data{
+    border-radius: 10px;
+    background-color: white;
+    width: 90vw;
+    height: 50vh;
+    margin: auto;
+    margin-top: 10em;
+    
+  }
+  
+
 
 input::placeholder {
   font-weight: bolder;
@@ -99,6 +110,7 @@ textarea {
   background-color: rgb(92, 70, 156);
   border-color: rgb(92, 70, 156);
 }
+
 .container {
   border-style: solid;
   border-color: grey;
