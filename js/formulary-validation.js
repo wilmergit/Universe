@@ -2,16 +2,16 @@
 
 function validateForm() {
 
-  let USERNAME = document.getElementById('inputUsername').value;
-  let EMAIL = document.getElementById('inputEmail').value;
-  let PASSWORD = document.getElementById('inputPassword').value;
+  let username = document.getElementById('input-username').value;
+  let email = document.getElementById('input-email').value;
+  let password = document.getElementById('input-password').value;
 
-  if (USERNAME == "") {
+  if (username == "") {
     alert('Username required');
     return false;
   }
 
-  if (EMAIL == "") {
+  if (email == "") {
     alert('Email required');
     return false;
   }
@@ -20,7 +20,7 @@ function validateForm() {
     return false;
   }
 
-  if (PASSWORD == "") {
+  if (password == "") {
     alert('Password required');
     return false;
   }
@@ -29,58 +29,109 @@ function validateForm() {
 }
 
 document.addEventListener('DOMContentLoaded', function () {
-  ReadData();
+  readData();
   }); 
 
 function readData(){
-  let USERS_LIST;
-  if (localStorage.getItem('USERS_LIST') == null) {
-    USERS_LIST = [];
+  let userList;
+  if (localStorage.getItem('userList') == null) {
+    userList = [];
   }
   else {
-    USERS_LIST = JSON.parse(localStorage.getItem('USERS_LIST'));
+    userList = JSON.parse(localStorage.getItem('userList'));
   }
 
   var html = "";
 
-  USERS_LIST.forEach(function (element, index) {
+  userList.forEach(function (element, index) {
     html += "<tr>";
-    html += "<td>"+ element.email + "</td>"
-    html += "<td>"+ element.username + "</td>"
+    html += "<td>"+ element.email + "</td>";
+    html += "<td>"+ element.username + "</td>";
     html += '<td><button onclick="deleteData('+ index +')" class="btn btn-danger">Eliminar</button> <button onclick="editData('+ index +')" class="btn btn-warning">Editar</button><td>';
-    html += "</tr>"
+    html += "</tr>";
   });
 
-  document.getElementById('#tableData').innerHTML = html;
+  document.getElementById('table-data').innerHTML = html;
 }
 
 document.onload = readData(); 
 
 function addData() {
   if (validateForm() == true) {
-    let USERNAME = document.getElementById('inputUsername').value;
-    let EMAIL = document.getElementById('inputEmail').value;
+    let username = document.getElementById('input-username').value;
+    let email = document.getElementById('input-email').value;
 
-    let USERS_LIST;
+    let userList;
     
-    if (localStorage.getItem('USERS_LIST') == null) {
-      USERS_LIST = [];
+    if (localStorage.getItem('userList') == null) {
+      userList = [];
     }
     else {
-      USERS_LIST = JSON.parse(localStorage.getItem('USERS_LIST'));
+      userList = JSON.parse(localStorage.getItem('userList'));
     }
 
-    USERS_LIST.push({
-      email: EMAIL,
-      username: USERNAME
+    userList.push({
+      email: email,
+      username: username
     });
 
-    localStorage.setItem('USERS_LIST', JSON.stringify(USERS_LIST));
+    localStorage.setItem('userList', JSON.stringify(userList));
     
     readData();
     
-    document.getElementById('inputEmail').value = "";
-    document.getElementById('inputUsername').value = "";
+    document.getElementById('input-email').value = "";
+    document.getElementById('input-username').value = "";
 
   }
 }
+
+  function deleteData(index){
+  let userList;
+
+  if (localStorage.getItem('userList') == null){
+    userList = [];
+  }else{
+    userList = JSON.parse(localStorage.getItem('userList'));
+  }
+
+  userList.splice(index, 1);
+  localStorage.setItem('userList', JSON.stringify(userList));
+
+  readData();
+}
+
+function editData(index){
+  document.getElementById('btn-add').style.display = 'none';
+  document.getElementById('btn-update').style.display = 'block';
+
+  let userList;
+    
+    if (localStorage.getItem('userList') == null) {
+      userList = [];
+    }
+    else {
+      userList = JSON.parse(localStorage.getItem('userList'));
+    }
+
+    document.getElementById('input-email').value = userList[index].email;
+    document.getElementById('input-username').value = userList[index].username;
+
+    document.querySelector('#btn-update').onclick = function (){
+      if (validateForm() = true){
+        userList[index].email = document.getElementById('input-email').value;
+        userList[index].username = document.getElementById('input-username').value;
+
+        localStorage.setItem('userList', JSON.stringify(userList));
+        readData();
+
+        document.getElementById('input-email').value = "";
+        document.getElementById('input-username').value = "";
+
+        document.getElementById('btn-add').style.display = 'block';
+        document.getElementById('btn-update').style.display = 'none';
+      }
+    }
+
+
+}
+
