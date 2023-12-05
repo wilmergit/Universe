@@ -159,6 +159,7 @@ body {
   background-color: rgb(251, 37, 118);
   border-left: 5em;
   border-right: 5em;
+  height: 60vh;
 }
 
 .header {
@@ -171,7 +172,7 @@ body {
   position: fixed;
   border-radius: 32px;
   background-color: rgba(17, 17, 17, 0.8);
-  width: 100vw;
+  width: 85vw;
   height: 8vh;
   backdrop-filter: blur(30px);
   z-index: 99;
@@ -207,27 +208,56 @@ body {
 }
 
 #header-section {
+  margin-top:3em; 
   position: relative;
   display: flex;
   width: 100vw;
   height: 100vh;
+  flex-direction: column;
   overflow: hidden;
+  align-items: center;
+  margin-bottom: 4em;
 }
 
-#header-section #galaxy {
-  width: 100%;
-  height: 90%;
+#header-section #earth {
+  position: absolute;
+  overflow: hidden;
+  backdrop-filter: blur(2px);
+}
+
+#header-section #bg {
+  width: 95%;
+  height: 100%;
+  border-radius: 10px;
   object-fit: fill;
   position: absolute;
-}
-
-#header-section #planets {
-  width: 100%;
-  height: 90%;
-  object-fit: contain;
-  position: absolute;
+  border-bottom: 0;
   overflow: hidden;
 }
+
+#header-section #intro {
+  width: 100%;
+  margin-top: 0%;
+  margin-left: .2em;
+  position: absolute;
+  font-size: 190px;
+  color: white;
+  text-align: left;
+  font-family: "Jost", sans-serif;
+
+}
+
+#header-section #intro-extra {
+  width: 100%;
+  margin-right: .2em;
+  margin-top: 1em;
+  position: absolute;
+  font-size: 190px;
+  color: rgb(251, 37, 118);
+  text-align: right;
+  font-family: "Jost", sans-serif;
+}
+
 
 #side-menu {
   /*Menu*/
@@ -534,8 +564,8 @@ body h3 {
 #sub-music {
   background-image: url(../img/category-music.jpg);
   background-size: cover;
-  width: 200px;
-  height: 200px;
+  width: 700px;
+  height:380px;
   display: flex;
   justify-content: center;
   align-items: end;
@@ -876,378 +906,965 @@ hr {
 
 /*-------------------------Media queries-------------------------------*/
 
+/* Large devices (laptops/desktops, 1020px and below) */
+@media only screen and (max-width: 1020px) {
+  
+  
+  
+  .first-section{
+   
+    height: 48vh;
+
+  }
+
+  .image-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: .3em;
+    margin-right: .3em;
+    margin-top: 0;
+  }
+
+  .reasons{
+    margin-top: 2em;
+  }
+
+  #games img {
+    width: 220px;
+    height: 180px;
+    border-radius: 15px;
+  }
+
+  #clothes img {
+    width: 220px;
+    height: 180px;
+    border-radius: 15px;
+  }
+  #movies img {
+    width: 220px;
+    height: 180px;
+    border-radius: 15px;
+  }
+  
+  #music img {
+    width: 220px;
+    height: 180px;
+    border-radius: 15px;
+  }
+  
+  #places img {
+    width: 220px;
+    height: 180px;
+    border-radius: 15px;
+  }
+  
+  #books img {
+    width: 220px;
+    height: 180px;
+    border-radius: 15px;
+  }
+
+  .first-row{
+    flex-direction: row;
+  }
+  .second-row{
+    flex-direction: row;
+  }
+
+  
+  #comics img {
+    width: 220px;
+    height: 180px;
+    border-radius: 15px;
+  }
+
+  #sub-music{
+    width: 400px;
+    height: 250px;
+  }
+  
+  .genres{
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: .4em;
+    justify-content: center;
+  }
+
+  #places-intro {
+    margin-bottom: 10em;
+  }
+
+  .slider-images {
+    flex-direction: column;
+    margin-bottom: 10em;
+    justify-content: center;
+  }
+
+  .slider-container{
+    margin: 4em;
+  }
+
+
+  .slider-images .slider-img:first-child,
+  .slider-images .slider-img:last-child {
+    width: 550px;
+    height: 120px;
+  }
+  
+  .slider-images .slider-img:nth-child(2),
+  .slider-images .slider-img:nth-child(5) {
+    width: 600px;
+    height: 120px;
+  }
+  
+  .slider-images .slider-img:nth-child(3),
+  .slider-images .slider-img:nth-child(4),
+  .slider-images .slider-img:nth-child(5) {
+    width: 660px;
+    height: 120px;
+  }
+  
+  .slider-images .slider-img:nth-child(6) {
+    width: 600px;
+    height: 120px;
+  }
+
+  .slider-img.active {
+    width: 750px !important;
+    height: 700px !important;
+  }
+  
+  .slider-container h1 {
+    transform: none;
+    text-align: justify;
+    top: 0;
+    left: 20%;
+    font-size: 35px;
+  }
+
+
+  #park {
+    left: 20%;
+  }
+  
+  #coffee {
+    left: 20%;
+  }
+
+  .last-container{
+    flex-direction: column;
+  }
+
+  .loc-container{
+    width: 95%;
+  }
+
+  .slider-container{
+    margin: .2em;
+    padding-bottom: 3em;
+  }
+
+  .section-container {
+    flex-direction: column-reverse;
+  
+  }
+
+  .fourth-section{
+    width: 95%;
+  }
+
+  .group-img img{
+    width: 50%;
+    margin-top: 1em;
+  }
+
+  .texts {
+    height: 50vh;
+  }
+
+  #work{
+    height: 45%;
+  }
+
+  #explanation{
+    margin-top: .2em;
+    height: 35%;
+  }
+
+  .foot-texts {
+
+    flex-direction: column;
+
+  }
+  .foot-info {
+    font-size: 22px;
+  }
+
+  #header-section #intro {
+    font-size: 90px;
+  }
+
+  #header-section #intro-extra {
+
+    font-size: 100px;
+
+  }
+
+  #header-section {
+    margin-top: 0;
+    height: 70vh;
+  }
+  
+  #header-section #earth {
+    margin-top: 7em;
+    width: 95%;
+
+  }
+
+  #header-section #bg {
+    width: 100%;
+    backdrop-filter: blur(2px);
+    display: none;
+  }
+
+  .content{
+    margin-top: 5em;
+  }
+
+  #side-menu{
+    width: 28vw;
+  }
+
+  #side-menu ul {
+    /*Menu Options*/
+    font-size: medium;
+    display: flex;
+    gap: .5em;
+    margin-left: -20px;
+    
+  }
+
+}
+
+/* Large devices (laptops/desktops, 992px and below) */
+@media only screen and (max-width: 992px) {
+  .first-section{
+    height: 60vh;
+
+  }
+
+  .image-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: .3em;
+    margin-right: .3em;
+    margin-top: 0;
+  }
+
+  .reasons{
+    margin-top: 2em;
+  }
+
+  #games img {
+    width: 220px;
+    height: 180px;
+    border-radius: 15px;
+  }
+
+  #clothes img {
+    width: 220px;
+    height: 180px;
+    border-radius: 15px;
+  }
+  #movies img {
+    width: 220px;
+    height: 180px;
+    border-radius: 15px;
+  }
+  
+  #music img {
+    width: 220px;
+    height: 180px;
+    border-radius: 15px;
+  }
+  
+  #places img {
+    width: 220px;
+    height: 180px;
+    border-radius: 15px;
+  }
+  
+  #books img {
+    width: 220px;
+    height: 180px;
+    border-radius: 15px;
+  }
+
+  .first-row{
+    flex-direction: row;
+  }
+  .second-row{
+    flex-direction: row;
+  }
+
+  
+  #comics img {
+    width: 220px;
+    height: 180px;
+    border-radius: 15px;
+  }
+
+  #sub-music{
+    width: 400px;
+    height: 250px;
+  }
+  
+  .genres{
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: .4em;
+    justify-content: center;
+  }
+
+  #places-intro {
+    margin-bottom: 10em;
+  }
+
+  .slider-images {
+    flex-direction: column;
+    margin-bottom: 10em;
+    justify-content: center;
+  }
+
+  .slider-container{
+    margin: 4em;
+  }
+
+
+  .slider-images .slider-img:first-child,
+  .slider-images .slider-img:last-child {
+    width: 480px;
+    height: 100px;
+  }
+  
+  .slider-images .slider-img:nth-child(2),
+  .slider-images .slider-img:nth-child(5) {
+    width: 550px;
+    height: 100px;
+  }
+  
+  .slider-images .slider-img:nth-child(3),
+  .slider-images .slider-img:nth-child(4),
+  .slider-images .slider-img:nth-child(5) {
+    width: 600px;
+    height: 100px;
+  }
+  
+  .slider-images .slider-img:nth-child(6) {
+    width: 550px;
+    height: 100px;
+  }
+
+  .slider-img.active {
+    width: 660px !important;
+    height: 600px !important;
+  }
+  
+  .slider-container h1 {
+    transform: none;
+    text-align: justify;
+    top: 0;
+    left: 20%;
+    font-size: 35px;
+  }
+
+
+  #park {
+    left: 20%;
+  }
+  
+  #coffee {
+    left: 20%;
+  }
+
+  .last-container{
+    flex-direction: column;
+  }
+
+  .loc-container{
+    width: 95%;
+  }
+
+  .slider-container{
+    margin: .2em;
+    padding-bottom: 3em;
+  }
+
+  .section-container {
+    flex-direction: column-reverse;
+  
+  }
+
+  .fourth-section{
+    width: 95%;
+  }
+
+  .group-img img{
+    width: 50%;
+    margin-top: 1em;
+  }
+
+  .texts {
+    height: 75vh;
+  }
+
+  #work{
+    height: 45%;
+  }
+
+  #explanation{
+    margin-top: .2em;
+    height: 35%;
+  }
+
+  .foot-texts {
+
+    flex-direction: column;
+
+  }
+  .foot-info {
+    font-size: 19px;
+  }
+
+  #header-section #intro {
+    font-size: 90px;
+  }
+
+  #header-section #intro-extra {
+
+    font-size: 100px;
+
+  }
+
+  #header-section {
+    margin-top: 0;
+    height: 70vh;
+  }
+  
+  #header-section #earth {
+    margin-top: 7em;
+    width: 95%;
+
+  }
+
+  #header-section #bg {
+    width: 100%;
+    backdrop-filter: blur(2px);
+    display: none;
+  }
+
+  .content{
+    margin-top: 5em;
+  }
+
+  #side-menu{
+    width: 30vw;
+  }
+
+  #side-menu ul {
+    /*Menu Options*/
+    font-size: medium;
+    display: flex;
+    gap: 1em;
+    margin-left: -30px;
+    
+  }
+
+
+}
+
+/* Medium devices (landscape tablets, 768px and down) */
+@media only screen and (max-width: 768px) {
+  .first-section{
+    height: 60vh;
+
+  }
+
+  .image-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: .3em;
+    margin-right: .3em;
+    margin-top: 0;
+  }
+
+  .reasons{
+    margin-top: 3em;
+  }
+
+  #games img {
+    width: 170px;
+    height: 120px;
+    border-radius: 15px;
+  }
+
+  #clothes img {
+    width: 170px;
+    height: 120px;
+    border-radius: 15px;
+  }
+  #movies img {
+    width: 170px;
+    height: 120px;
+    border-radius: 15px;
+  }
+  
+  #music img {
+    width: 170px;
+    height: 120px;
+    border-radius: 15px;
+  }
+  
+  #places img {
+    width: 170px;
+    height: 120px;
+    border-radius: 15px;
+  }
+  
+  #books img {
+    width: 170px;
+    height: 120px;
+    border-radius: 15px;
+  }
+
+  .first-row{
+    flex-direction: row;
+  }
+  .second-row{
+    flex-direction: row;
+  }
+
+  
+  #comics img {
+    width: 180px;
+    height: 120px;
+    border-radius: 15px;
+  }
+
+  #sub-music{
+    width: 400px;
+    height: 250px;
+  }
+  
+  .genres{
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: .4em;
+    justify-content: center;
+  }
+
+  #places-intro {
+    margin-bottom: 10em;
+  }
+
+  .slider-images {
+    flex-direction: column;
+    margin-bottom: 10em;
+    justify-content: center;
+  }
+
+  .slider-container{
+    margin: 4em;
+  }
+
+
+  .slider-images .slider-img:first-child,
+  .slider-images .slider-img:last-child {
+    width: 390px;
+    height: 100px;
+  }
+  
+  .slider-images .slider-img:nth-child(2),
+  .slider-images .slider-img:nth-child(5) {
+    width: 410px;
+    height: 100px;
+  }
+  
+  .slider-images .slider-img:nth-child(3),
+  .slider-images .slider-img:nth-child(4),
+  .slider-images .slider-img:nth-child(5) {
+    width: 430px;
+    height: 100px;
+  }
+  
+  .slider-images .slider-img:nth-child(6) {
+    width: 410px;
+    height: 100px;
+  }
+
+  .slider-img.active {
+    width: 440px !important;
+    height: 470px !important;
+  }
+  
+  .slider-container h1 {
+    transform: none;
+    text-align: justify;
+    top: 0;
+    left: 20%;
+    font-size: 35px;
+  }
+
+
+  #park {
+    left: 20%;
+  }
+  
+  #coffee {
+    left: 20%;
+  }
+
+  .last-container{
+    flex-direction: column;
+  }
+
+  .loc-container{
+    width: 95%;
+  }
+
+  .slider-container{
+    margin: .2em;
+    padding-bottom: 3em;
+  }
+
+  .section-container {
+    flex-direction: column-reverse;
+  
+  }
+
+  .fourth-section{
+    width: 95%;
+  }
+
+  .group-img img{
+    width: 50%;
+    margin-top: 1em;
+  }
+
+  .texts {
+    height: 110vh;
+  }
+
+  #work{
+    height: 45%;
+  }
+
+  #explanation{
+    margin-top: .2em;
+    height: 35%;
+  }
+
+  .foot-texts {
+
+    flex-direction: column;
+
+  }
+  .foot-info {
+    font-size: 16px;
+  }
+
+  #header-section #intro {
+    font-size: 70px;
+  }
+
+  #header-section #intro-extra {
+
+    font-size: 85px;
+
+  }
+
+  #header-section {
+    margin-top: 0;
+    height: 70vh;
+  }
+  
+  #header-section #earth {
+    margin-top: 7em;
+    width: 95%;
+
+  }
+
+  #header-section #bg {
+    width: 100%;
+    backdrop-filter: blur(2px);
+    display: none;
+  }
+
+  .content{
+    margin-top: 5em;
+  }
+
+  #side-menu {
+    /*Menu*/
+    font-size: xx-large;
+    
+    height: 40vh;
+    width: 30vw;
+    
+  }
+
+  #side-menu ul {
+    /*Menu Options*/
+    align-items: center;
+    flex-direction: column;
+    margin-left: -50px;
+    margin-top: 170px;
+    gap: 1em;
+  }
+
+  .header{
+    overflow: visible;
+  }
+}
+
 /* Small devices (portrait tablets and large phones, 600px and down) */
 @media only screen and (max-width: 600px) {
+  .first-section{
+    height: 110vh;
+
+  }
+
+  .image-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: .2em;
+    margin-right: .2em;
+    margin-top: 0;
+  }
+
+  .reasons{
+    margin-top: 3em;
+  }
+
+  #games img {
+    width: 180px;
+    height: 120px;
+    border-radius: 15px;
+  }
+
+  #clothes img {
+    width: 180px;
+    height: 120px;
+    border-radius: 15px;
+  }
+  #movies img {
+    width: 180px;
+    height: 120px;
+    border-radius: 15px;
+  }
+  
+  #music img {
+    width: 180px;
+    height: 120px;
+    border-radius: 15px;
+  }
+  
+  #places img {
+    width: 180px;
+    height: 120px;
+    border-radius: 15px;
+  }
+  
+  #books img {
+    width: 180px;
+    height: 120px;
+    border-radius: 15px;
+  }
+
+  .first-row{
+    flex-direction: row;
+  }
+  .second-row{
+    flex-direction: row;
+  }
+
+  
+  #comics img {
+    width: 180px;
+    height: 120px;
+    border-radius: 15px;
+  }
+
+  .genres{
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: .4em;
+  }
+
+  #places-intro {
+    margin-bottom: 10em;
+  }
+
+  .slider-images {
+    flex-direction: column;
+    margin-bottom: 10em;
+    justify-content: center;
+  }
+
+  .slider-container{
+    margin: 4em;
+  }
+
+
+  .slider-images .slider-img:first-child,
+  .slider-images .slider-img:last-child {
+    width: 390px;
+    height: 100px;
+  }
+  
+  .slider-images .slider-img:nth-child(2),
+  .slider-images .slider-img:nth-child(5) {
+    width: 410px;
+    height: 100px;
+  }
+  
+  .slider-images .slider-img:nth-child(3),
+  .slider-images .slider-img:nth-child(4),
+  .slider-images .slider-img:nth-child(5) {
+    width: 430px;
+    height: 100px;
+  }
+  
+  .slider-images .slider-img:nth-child(6) {
+    width: 410px;
+    height: 100px;
+  }
+
+  .slider-img.active {
+    width: 440px !important;
+    height: 470px !important;
+  }
+  
+  .slider-container h1 {
+    transform: none;
+    text-align: justify;
+    top: 0;
+    left: 20%;
+    font-size: 35px;
+  }
+
+
+  #park {
+    left: 20%;
+  }
+  
+  #coffee {
+    left: 20%;
+  }
+
+  .last-container{
+    flex-direction: column;
+  }
+
+  .loc-container{
+    width: 95%;
+  }
+
+  .slider-container{
+    margin: .2em;
+    padding-bottom: 3em;
+  }
+
+  .section-container {
+    flex-direction: column-reverse;
+  
+  }
+
+  .fourth-section{
+    width: 95%;
+  }
+
+  .group-img img{
+    width: 50%;
+    margin-top: 1em;
+  }
+
+  .texts {
+    height: 159vh;
+  }
+
+  #work{
+    height: 45%;
+  }
+
+  #explanation{
+    margin-top: .2em;
+    height: 35%;
+  }
+
+  .foot-texts {
+
+    flex-direction: column;
+
+  }
+  .foot-info {
+    font-size: 12px;
+  }
+
+  #header-section #intro {
+    font-size: 70px;
+  }
+
+  #header-section #intro-extra {
+
+    font-size: 85px;
+
+  }
+
   #header-section {
-    position: relative;
-    display: flex;
-    width: 100vw;
-    height: 100vh;
+    margin-top: 0;
+    height: 70vh;
+  }
+  
+  #header-section #earth {
+    margin-top: 7em;
+    width: 95%;
+
   }
 
-  #header-section #galaxy {
+  #header-section #bg {
     width: 100%;
-    height: 90%;
-    object-fit: fill;
-    position: absolute;
+    backdrop-filter: blur(2px);
+    display: none;
   }
 
-  #header-section #planets {
-    width: 100%;
-    height: 90%;
-    object-fit: contain;
-    position: absolute;
+  .content{
+    margin-top: 5em;
   }
 
-  .content-image {
-    width: 60vw;
-    padding: 0.5em;
-  }
-
-  #subcategory {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-    color: white;
-    font-size: xx-large;
-    font-style: italic;
-    margin: 1.5em;
-  }
-
-  #sub-music {
-    background-image: url(../img/category-music.jpg);
-    background-size: cover;
-    width: 45vw;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-  }
-
-  #location img {
-    width: 90vw;
-    height: 30vh;
-    margin: 1.5em;
-  }
-
-  .img-container img {
-    object-fit: cover;
-    width: 40vw;
-    height: 30vh;
-  }
-
-  #explanation {
-    align-items: center;
-    height: 50%;
-  }
-
-  #work {
-    align-items: center;
-    height: 50%;
-  }
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-
-    position: fixed;
-    width: 100vw;
-    height: 8vh;
-  }
-
-  .content-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
+  #side-menu {
+    /*Menu*/
     font-size: large;
-    text-align: center;
+    
+    height: 40vh;
+    width: 30vw;
+    
   }
 
-  .content h1 {
-    width: 100vw;
-    margin: 0;
-  }
-}
-
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
-  .content-image {
-    width: 60vw;
-    padding: 0.5em;
-  }
-
-  #subcategory {
-    display: flex;
-    flex-wrap: wrap;
-
+  #side-menu ul {
+    /*Menu Options*/
+    align-items: center;
+    flex-direction: column;
+    margin-left: -50px;
+    margin-top: 170px;
     gap: 1em;
-
-    font-size: xx-large;
-    font-style: italic;
-    margin: 1.5em;
   }
 
-  #sub-music {
-    background-image: url(../img/category-music.jpg);
-    background-size: cover;
-    width: 45vw;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-  }
-
-  #location img {
-    width: 90vw;
-    height: 30vh;
-    margin: 1.5em;
-  }
-
-  .img-container img {
-    object-fit: cover;
-    width: 40vw;
-    height: 30vh;
-  }
-
-  #explanation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 60vh;
-  }
-
-  #work {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 60vh;
-  }
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-
-    position: fixed;
-    width: 100vw;
-    height: 8vh;
-  }
-
-  .content-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    font-size: large;
-    text-align: center;
-  }
-
-  .content h1 {
-    width: 100vw;
-    margin: 0;
-  }
-}
-
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-  .content-image {
-    width: 60vw;
-    padding: 0.5em;
-  }
-
-  #subcategory {
-    display: flex;
-    flex-wrap: wrap;
-
-    gap: 1em;
-
-    font-size: xx-large;
-    font-style: italic;
-    margin: 1.5em;
-  }
-
-  #sub-music {
-    background-image: url(../img/category-music.jpg);
-    background-size: cover;
-    width: 45vw;
-    height: 30vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-  }
-
-  #location img {
-    width: 90vw;
-    height: 30vh;
-    margin: 1.5em;
-  }
-
-  .img-container img {
-    object-fit: cover;
-    width: 40vw;
-    height: 30vh;
-  }
-
-  #explanation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 50vh;
-  }
-
-  #work {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 50vh;
-  }
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-
-    position: fixed;
-    width: 100vw;
-    height: 8vh;
-  }
-
-  .content-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    font-size: large;
-    text-align: center;
-  }
-
-  .content h1 {
-    width: 100vw;
-    margin: 0;
-  }
-}
-
-/* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
-  .content-image {
-    width: 60vw;
-    padding: 0.5em;
-  }
-
-  #subcategory {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1em;
-
-    font-size: xx-large;
-    font-style: italic;
-    margin: 1.5em;
-  }
-
-  #sub-music {
-    background-image: url(../img/category-music.jpg);
-    background-size: cover;
-    width: 45vw;
-
-    display: flex;
-    justify-content: center;
-    align-items: end;
-  }
-
-  #location img {
-    width: 90vw;
-    height: 40vh;
-    margin: 1.5em;
-  }
-
-  .img-container img {
-    object-fit: cover;
-    width: 40vw;
-    height: 30vh;
-  }
-
-  #explanation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 40vh;
-  }
-
-  #work {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 40vh;
-  }
-
-  .header {
-    display: flex;
-    justify-content: space-between;
-
-    position: fixed;
-    width: 80vw;
-    height: 8vh;
-  }
-
-  .content-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .content {
-    display: flex;
-    flex-direction: column;
-    font-size: large;
-    text-align: center;
-  }
-
-  .content h1 {
-    width: 100vw;
-    margin: 0;
-  }
-}
-
-/* Large devices (laptops/desktops, 1020px and up) */
-@media only screen and (min-width: 1020px) {
-  #function {
-    margin: 1em;
-  }
-
-  .reasons {
-    margin: 0.5em;
-  }
-
-  #location img {
-    width: 90vw;
-    height: 55vh;
-    margin: 1.5em;
-  }
-
-  #sub-music {
-    background-image: url(../img/category-music.jpg);
-    background-size: cover;
-    width: 36vw;
-    height: 40vh;
-    display: flex;
-    justify-content: center;
-    align-items: end;
-  }
-
-  .img-container img {
-    object-fit: fill;
-    width: 360px;
-    height: 400px;
+  .header{
+    overflow: visible;
   }
 }

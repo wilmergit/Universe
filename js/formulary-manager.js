@@ -1,5 +1,6 @@
 let users = [];
 
+
 function initialize() {
   const USER_FORM = document.getElementById("users-form");
   USER_FORM.addEventListener("submit", addUser);
@@ -29,13 +30,14 @@ function showUsers() {
   USERS_LIST.innerHTML = "";
 
   for (let i = 0; i < users.length; i++) {
-    USERS_LIST.innerHTML += `<li>${users[i].username}<button class="bt" onclick="deleteUser(${i})">DELETE</button></li>`;
-    USERS_LIST.innerHTML += `<li>${users[i].username}<button class="bt" onclick="modifyUser(${i})">MODIFY</button></li>`;
+    USERS_LIST.innerHTML += `<li>${users[i].username}<button class="bt" onclick="deleteUser(${i})">DELETE</button><button class="bt" onclick="modifyUser(${i})">MODIFY</button></li>`;
   }
 }
 
-function modifyUser(userId) {
-  USERNAME = userId.target.username.value;s
+function modifyUser(username) {
+  const USERNAME = username.target.username.value;
+  USERNAME.value = username.value;
+  showUsers();
 }
 
 function deleteUser(userId) {
