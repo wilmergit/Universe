@@ -70,6 +70,21 @@
       </table>
     </div>
   </div>
+
+  <div id="chat" class="container">
+    <div class="send-message">
+      <h1>Live chat</h1>
+      <form id="form-send-message">
+        <input id="message-sender" class="form-control mb-3"  type="text" name="sent-by" placeholder="your name">
+        <input id="message-text" class="form-control mb-3" type="text" name="message" placeholder="your message">
+        <button class="btn btn-light" type="submit">send</button>
+      </form>
+    </div>
+    <div id="message-list">
+    </div>
+  </div>
+
+  <script type="module" src="js/chat.js"></script>
   <script src="https://kit.fontawesome.com/6f5c749e7d.js" crossorigin="anonymous"></script>
   <script src="js/formulary-validation.js"></script>
 </body>
